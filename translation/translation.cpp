@@ -4,6 +4,20 @@
 using namespace std;
 using namespace boost::locale;
 
+static void function1(int files)
+{
+    cout << format(translate("You have {1} file in the directory",
+        "You have {1} files in the directory",
+        files)) % files << endl;
+}
+
+static void function2(int n)
+{
+    cout << format(translate("Option1 {1} file in the directory",
+        "Option2 {1} files in the directory",
+        n)) % n << endl;
+}
+
 int main()
 {
     generator gen;
@@ -23,22 +37,12 @@ int main()
 
     int files = 1;
 
-    cout << format(translate("You have {1} file in the directory",
-        "You have {1} files in the directory",
-        files)) % files << endl;
+    function1(1);
+    function1(4);
 
-   
-    files = 4;
-    cout << format(translate("You have {1} file in the directory",
-        "You have {1} files in the directory",
-        files)) % files << endl;
-
-    int n = 5;
-    cout << format(translate("Option1 {1} file in the directory",
-        "Option2 {1} files in the directory",
-        n)) % n << endl;
-
-    
+    function2(1);
+    function2(2);
+    function2(5);
 
 
 }
