@@ -42,7 +42,7 @@ int main()
 
     function2(1);
     function2(2);
-    function2(5);
+    function2(15);
 
 
 }
