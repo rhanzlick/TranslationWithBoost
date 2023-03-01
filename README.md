@@ -2,7 +2,7 @@
 
 A project to get students starting to run with boost translation
 
-To regenerate the po and mo file.
+To regenerate the po and mo file.  You will need to get a copy of gettext-tools (this demo uses gettext-tools-static-0.18.1.1)
 
 <path>\xgettext.exe --keyword=Localize:1,1t --keyword=Localize:1,2,3t --keyword=Localize:1,2,3t --keyword=Localize:1c,2,3,4t --keyword=Localize:2,1c,2t  translation.cpp
 
