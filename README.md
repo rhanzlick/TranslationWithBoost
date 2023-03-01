@@ -6,6 +6,15 @@ To regenerate the po and mo file.
 
 <path>\xgettext.exe --keyword=Localize:1,1t --keyword=Localize:1,2,3t --keyword=Localize:1,2,3t --keyword=Localize:1c,2,3,4t --keyword=Localize:2,1c,2t  translation.cpp
 
+Make edits to po file.  Be aware you need to change header to overwrite the following lines in the default po file.
+
+  "Language: de \n"
+  "MIME-Version: 1.0\n"
+  "Content-Type: text/plain; charset=UTF-8\n"
+  "Content-Transfer-Encoding: 8bit\n"
+  "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+
 <path>\msgfmt.exe --o messages.mo messages.po
 
 move messages.mo de\LC_MESSAGES\messages.mo
