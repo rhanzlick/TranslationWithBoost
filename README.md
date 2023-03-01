@@ -9,3 +9,9 @@ To regenerate the po and mo file.
 <path>\msgfmt.exe --o messages.mo messages.po
 
 move messages.mo de\LC_MESSAGES\messages.mo
+
+  
+  And the finally in LocalizationUtils.cpp
+  genPtr->add_messages_path("C:\\Users\\polek\\source\\repos\\boost_starting\\translation");
+  
+  Fix this line to be where the mo files are located at.
