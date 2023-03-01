@@ -10,7 +10,7 @@
 /// <param name="msg"></param>
 /// <param name="ctx"></param>
 /// <returns></returns>
-LOCALIZATIONUTILS_API std::string Localize(const std::string& msg, const std::string& ctx);
+LOCALIZATIONUTILS_API std::string Localize(const std::string& ctx, const std::string& msg);
 
 
 /// <summary>

@@ -20,8 +20,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="de.po" />
-    <None Include="en_CA.po" />
     <None Include="messages.po">
       <Filter>Source Files</Filter>
     </None>

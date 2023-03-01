@@ -3,15 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "boost_starting", "boost_starting\boost_starting.vcxproj", "{803FF4C6-5715-4688-80F7-1F368CA47A81}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BoostPresentation", "BoostPresentation\BoostPresentation.vcxproj", "{27DC1BF6-65A6-409F-ACCE-DFF1FF1FD77C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BoostConversion", "BoostConversion\BoostConversion.vcxproj", "{501A5A48-CDE9-4752-893E-A7B5C493FBF9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "translation", "translation\translation.vcxproj", "{43C342C2-024A-485E-8625-04A82A544908}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ValidSig", "ValidSig\ValidSig.vcxproj", "{5320B1FF-BF6F-4FA4-ACBB-B2A47087B3DB}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LocalizationUtil", "LocalizationUtils\LocalizationUtils.vcxproj", "{C4276DE8-02FF-4B18-AD97-21F3ACE3D48A}"
 EndProject
@@ -23,14 +19,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{803FF4C6-5715-4688-80F7-1F368CA47A81}.Debug|x64.ActiveCfg = Debug|x64
-		{803FF4C6-5715-4688-80F7-1F368CA47A81}.Debug|x64.Build.0 = Debug|x64
-		{803FF4C6-5715-4688-80F7-1F368CA47A81}.Debug|x86.ActiveCfg = Debug|x64
-		{803FF4C6-5715-4688-80F7-1F368CA47A81}.Debug|x86.Build.0 = Debug|x64
-		{803FF4C6-5715-4688-80F7-1F368CA47A81}.Release|x64.ActiveCfg = Release|x64
-		{803FF4C6-5715-4688-80F7-1F368CA47A81}.Release|x64.Build.0 = Release|x64
-		{803FF4C6-5715-4688-80F7-1F368CA47A81}.Release|x86.ActiveCfg = Release|x64
-		{803FF4C6-5715-4688-80F7-1F368CA47A81}.Release|x86.Build.0 = Release|x64
 		{27DC1BF6-65A6-409F-ACCE-DFF1FF1FD77C}.Debug|x64.ActiveCfg = Debug|x64
 		{27DC1BF6-65A6-409F-ACCE-DFF1FF1FD77C}.Debug|x64.Build.0 = Debug|x64
 		{27DC1BF6-65A6-409F-ACCE-DFF1FF1FD77C}.Debug|x86.ActiveCfg = Debug|x64
@@ -55,14 +43,6 @@ Global
 		{43C342C2-024A-485E-8625-04A82A544908}.Release|x64.Build.0 = Release|x64
 		{43C342C2-024A-485E-8625-04A82A544908}.Release|x86.ActiveCfg = Release|x64
 		{43C342C2-024A-485E-8625-04A82A544908}.Release|x86.Build.0 = Release|x64
-		{5320B1FF-BF6F-4FA4-ACBB-B2A47087B3DB}.Debug|x64.ActiveCfg = Debug|x64
-		{5320B1FF-BF6F-4FA4-ACBB-B2A47087B3DB}.Debug|x64.Build.0 = Debug|x64
-		{5320B1FF-BF6F-4FA4-ACBB-B2A47087B3DB}.Debug|x86.ActiveCfg = Debug|x64
-		{5320B1FF-BF6F-4FA4-ACBB-B2A47087B3DB}.Debug|x86.Build.0 = Debug|x64
-		{5320B1FF-BF6F-4FA4-ACBB-B2A47087B3DB}.Release|x64.ActiveCfg = Release|x64
-		{5320B1FF-BF6F-4FA4-ACBB-B2A47087B3DB}.Release|x64.Build.0 = Release|x64
-		{5320B1FF-BF6F-4FA4-ACBB-B2A47087B3DB}.Release|x86.ActiveCfg = Release|x64
-		{5320B1FF-BF6F-4FA4-ACBB-B2A47087B3DB}.Release|x86.Build.0 = Release|x64
 		{C4276DE8-02FF-4B18-AD97-21F3ACE3D48A}.Debug|x64.ActiveCfg = Debug|x64
 		{C4276DE8-02FF-4B18-AD97-21F3ACE3D48A}.Debug|x64.Build.0 = Debug|x64
 		{C4276DE8-02FF-4B18-AD97-21F3ACE3D48A}.Debug|x86.ActiveCfg = Debug|Win32
