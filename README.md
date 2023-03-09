@@ -15,12 +15,14 @@ Make edits to po file.  Be aware you need to change header to overwrite the foll
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 ```
 
+Also be aware when running xgettext it will blank out all translations that existed beforehand.  Either provide new ones, or use the ones in the older version of the fil.
+
 <path>\msgfmt.exe --o messages.mo messages.po
 
 move messages.mo de\LC_MESSAGES\messages.mo
 
   
-  And the finally in LocalizationUtils.cpp
-  genPtr->add_messages_path("C:\\Users\\polek\\source\\repos\\boost_starting\\translation");
+To add in more mo files to  in LocalizationUtils.cpp
+  genPtr->add_messages_domain("messages");
   
-  Fix this line to be where the mo files are located at.
+
