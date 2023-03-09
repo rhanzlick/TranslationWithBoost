@@ -5,6 +5,7 @@
 #include "LocalizationUtils.h"
 #include "LocalizationUtilsInternal.h"
 #include <boost/locale.hpp>
+#include <iostream>
 
 using namespace boost::locale;
 
