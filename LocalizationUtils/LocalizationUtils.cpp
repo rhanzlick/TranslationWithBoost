@@ -12,14 +12,48 @@ static generator* genPtr = nullptr;
 
 static bool isInitialized = false;
 
+static bool determinedBasePath = false;
+static std::string basePath;
+
+static std::string RemoveLastDirectory(const std::string& dirPath);
+static std::string BasePath();
+
+static std::string BasePath() {
+    if (!determinedBasePath)
+    {
+        TCHAR buffer[MAX_PATH] = { 0 };
+        GetModuleFileName(NULL, buffer, MAX_PATH);
+        std::wstring::size_type pos = std::wstring(buffer).find_last_of(L"\\/");
+        std::wstring wStr = std::wstring(buffer).substr(0, pos);
+
+        std::string tmp = std::string(wStr.begin(), wStr.end());
+
+        std::string tmp1 = RemoveLastDirectory(tmp);
+        basePath = RemoveLastDirectory(tmp1);
+    }
+
+    return basePath;
+}
+
+static std::string RemoveLastDirectory(const std::string& dirPath)
+{
+    auto pos = dirPath.find_last_of("\\");
+    std::string retVal = dirPath.substr(0, pos);
+
+    return retVal;
+}
 
 void LocalizeUtilsInit()
 {
     
     // Specify location of dictionaries
     genPtr = new generator();
-    // TODO you will need to change this value to your local directory of where mo file
-    genPtr->add_messages_path("C:\\Users\\polek\\source\\repos\\boost_starting\\translation");
+
+    // THe assumption is the directory where the de\LC_MESSAGES is located is at
+    // boost_starting\translation\de\LC_MESSAGES
+    // So to make this more portable I have taken out the hardcoded path
+    std::string basePath = BasePath();
+    genPtr->add_messages_path(basePath +"\\translation");
     genPtr->add_messages_domain("messages");
 
     std::locale::global(( *genPtr)("de_DE.UTF - 8"));
