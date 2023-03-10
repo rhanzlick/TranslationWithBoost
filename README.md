@@ -4,9 +4,11 @@ A project to get students starting to run with boost translation
 
 To regenerate the po and mo file.  You will need to get a copy of gettext-tools (this demo uses gettext-tools-static-0.18.1.1)
 
+Consider making a backup of the po file, as when you run the next command it will re-generate it.
+
 <path>\xgettext.exe --keyword=Localize:1,1t --keyword=Localize:1,2,3t --keyword=Localize:1,2,3t --keyword=Localize:1c,2,3,4t --keyword=Localize:2,1c,2t  translation.cpp
 
-Make edits to po file.  Be aware you need to change header to overwrite the following lines in the default po file.
+Make edits to po file.  Be aware you need to change header to overwrite the following lines in the newly outputted po file.
 ```
 "Language: de \n"
 "MIME-Version: 1.0\n"
@@ -15,7 +17,7 @@ Make edits to po file.  Be aware you need to change header to overwrite the foll
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 ```
 
-Also be aware when running xgettext it will blank out all translations that existed beforehand.  Either provide new ones, or use the ones in the older version of the fil.
+Also be aware when running xgettext it will blank out all translations that existed beforehand (hence the reason to backup the po file)  Either provide new ones, or use the ones in the older version of the file.  I'd suggest slightly changing the translation just to prove it is picking up your chagnes to the po file.
 
 <path>\msgfmt.exe --o messages.mo messages.po
 
