@@ -6,7 +6,7 @@ To regenerate the po and mo file.  You will need to get a copy of gettext-tools 
 
 Consider making a backup of the po file, as when you run the next command it will re-generate it.
 
-<path>\xgettext.exe --keyword=Localize:1,1t --keyword=Localize:1,2,3t --keyword=Localize:1,2,3t --keyword=Localize:1c,2,3,4t --keyword=Localize:2,1c,2t  translation.cpp
+PATH_TO_XGETTEXT_TOOL_YOU_NEED_TO_USE_RIGHT_PATH\xgettext.exe --keyword=Localize:1,1t --keyword=Localize:1,2,3t --keyword=Localize:1,2,3t --keyword=Localize:1c,2,3,4t --keyword=Localize:2,1c,2t  translation.cpp
 
 Make edits to po file.  Be aware you need to change header to overwrite the following lines in the newly outputted po file.
 ```
