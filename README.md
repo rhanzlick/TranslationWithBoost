@@ -26,5 +26,7 @@ move messages.mo de\LC_MESSAGES\messages.mo
   
 To add in more mo files to  in LocalizationUtils.cpp
   genPtr->add_messages_domain("messages");
+
+  However, there is a bug I need to address, as to retrieve a translation from a mo you do some things.  https://www.boost.org/doc/libs/1_48_0/libs/locale/doc/html/messages_formatting.html#multiple_gettext_domain
   
 
