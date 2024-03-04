@@ -17,7 +17,7 @@ int main()
     generator gen;
 
     // One of these lines should be uncommented
-    // std::locale::global(gen("de_DE.UTF - 8"));
+    //std::locale::global(gen("de_DE.UTF - 8"));
 
     // This is hte other line, only one of these shoudl be commented
     std::locale::global(gen(""));

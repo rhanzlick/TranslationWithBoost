@@ -55,7 +55,8 @@ void LocalizeUtilsInit()
     // So to make this more portable I have taken out the hardcoded path
     std::string basePath = BasePath();
     genPtr->add_messages_path(basePath +"\\translation");
-    genPtr->add_messages_domain("messages");
+    //genPtr->add_messages_domain("messages");
+    genPtr->add_messages_domain("sample");
 
     std::locale::global(( *genPtr)("de_DE.UTF - 8"));
 
