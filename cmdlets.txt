@@ -1,0 +1,39 @@
+"F:\UC\Spring2024\SoftwareArchitecture\Assignment 5\GetText\bin\xgettext.exe" --keyword=Localize:1,1t --keyword=Localize:1,2,3t --keyword=Localize:1,2,3t --keyword=Localize:1c,2,3,4t --keyword=Localize:2,1c,2t translation.cpp -o sample.po
+
+"F:\UC\Spring2024\SoftwareArchitecture\Assignment 5\GetText\bin\xgettext.exe" --keyword=Localize:1,1t --keyword=Localize:1,2,3t --keyword=Localize:1,2,3t --keyword=Localize:1c,2,3,4t --keyword=Localize:2,1c,2t AssignmentTranslator.cpp -o sample.po
+
+
+"F:\UC\Spring2024\SoftwareArchitecture\Assignment 5\GetText\bin\msgfmt.exe" --o sample.mo sample.po
+
+
+//******************************************* Cert *******************************************
+//********************************************************************************************
+
+//New-SelfSignedCertificate -CertStoreLocation cert:\currentuser\my -Subject "CN=Local Code Signing" -KeyAlgorithm RSA -KeyLength 2048 -Provider "Microsoft Enhanced RSA and AES Cryptographic Provider" -KeyExportPolicy Exportable -KeyUsage DigitalSignature -Type CodeSigningCert
+
+$params = @{
+Type = 'CodeSigningCert'
+CertStoreLocation = 'cert:\currentuser\my'
+Subject = 'CN=Local Code Signing'
+KeyAlgorithm = 'RSA'
+KeyLength = 2048
+KeyExportPolicy = 'Exportable'
+KeyUsage = 'DigitalSignature'
+Provider = 'Microsoft Enhanced RSA and AES Cryptographic Provider'
+
+}
+
+New-SelfSignedCertificate @params
+
+thumbprint: 949BCB7F967D96E9A4620C21A9F95EA1F22A377A
+
+open CertManager:
+certmgr /s my
+
+PS C:\Users\Ryan> Get-ChildItem cert:\currentuser\my | select issuer,subject
+//choose index of cert that matches
+@(Get-ChildItem cert:\currentuser\my -CodeSigning)[0]
+
+Set-AuthenticodeSignature "F:\UC\Spring2024\SoftwareArchitecture\Assignment 5\TranslationWithBoost\x64\Debug\translation.exe" $cert
+
+//********************************************************************************************
